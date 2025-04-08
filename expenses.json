@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Gas Bill",
+    "amount": 4500.0,
+    "category": "Bills",
+    "date": "2025-04-08"
+  },
+  {
+    "title": "Grocery ",
+    "amount": 1100.0,
+    "category": "Bills",
+    "date": "2025-04-08"
+  },
+  {
+    "title": "internet",
+    "amount": 1400.0,
+    "category": "Bills",
+    "date": "2025-04-08"
+  },
+  {
+    "date": "2025-04-08",
+    "title": "Breakfast",
+    "amount": 1000.0,
+    "category": "Food"
+  },
+  {
+    "date": "2025-04-08",
+    "title": "Pents",
+    "amount": 1000.0,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-04-08",
+    "title": "Traveling",
+    "amount": 2000.0,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-04-08",
+    "title": "Movie",
+    "amount": 2000.0,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-04-08",
+    "title": "Mobile",
+    "amount": 4500.0,
+    "category": "Other"
+  }
+]
