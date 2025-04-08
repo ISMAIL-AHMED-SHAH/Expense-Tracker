@@ -46,5 +46,11 @@
     "title": "Mobile",
     "amount": 4500.0,
     "category": "Other"
+  },
+  {
+    "date": "2025-04-09",
+    "title": "bread butter",
+    "amount": 2000.0,
+    "category": "Food"
   }
 ]

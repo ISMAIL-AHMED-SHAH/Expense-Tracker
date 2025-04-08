@@ -9,7 +9,11 @@ import xlsxwriter
 
 # --- Page Config ---
 st.set_page_config(page_title="💸 Expense Tracker", layout="centered")
-st.image("expenses.png")
+try:
+    st.image("expenses.png")
+except FileNotFoundError:
+    st.warning("Header image (expenses.png) not found. Please ensure the file is uploaded to the repository.")
+
 st.title("💸 Expense Tracker")
 st.markdown("Track your spending, analyze habits, and stay financially fit! 🧾")
 
@@ -40,7 +44,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
 # --- Load Existing Data ---
 data_file = "expenses.json"
 
@@ -60,7 +63,6 @@ with st.form("expense_form"):
     expense_date = st.date_input("Date", value=date.today())
     submitted = st.form_submit_button("💾 Save Expense")
 
-
 if submitted:
     if title and amount > 0:
         new_expense = {
@@ -78,6 +80,9 @@ if submitted:
 
 # --- Convert to DataFrame ---
 df = pd.DataFrame(expenses)
+
+# Define filtered_df with a default empty DataFrame
+filtered_df = pd.DataFrame()
 
 if not df.empty:
     df["date"] = pd.to_datetime(df["date"])
@@ -138,15 +143,21 @@ else:
 
 # --- Sidebar Motivation ---
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2736/2736690.png", width=100)
-st.sidebar.image("expense-track.png")
+try:
+    st.sidebar.image("expense-track.png")
+except FileNotFoundError:
+    st.sidebar.warning("Sidebar image (expense-track.png) not found. Please ensure the file is uploaded.")
+
 st.sidebar.markdown("## 💡 Money Tip")
 st.sidebar.info("Track every rupee, and your wallet will thank you! 💰")
 
-
-# --- Category Summary ---
+# --- Sidebar Category Summary ---
 st.sidebar.subheader("📊 Expenses by Category")
-cat_summary = filtered_df.groupby("category")["amount"].sum().reset_index()
-st.sidebar.dataframe(cat_summary)
+if not filtered_df.empty:
+    cat_summary = filtered_df.groupby("category")["amount"].sum().reset_index()
+    st.sidebar.dataframe(cat_summary)
+else:
+    st.sidebar.info("No expenses to summarize yet.")
 
 if st.sidebar.button("🧹 Clear All Data"):
     with open("expenses.json", "w") as f:
