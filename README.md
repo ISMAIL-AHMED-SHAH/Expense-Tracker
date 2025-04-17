@@ -1,4 +1,4 @@
-# 💸 Expense Tracker App (Streamlit)
+# 💸 Expense Tracker App
 
 A simple yet powerful app that allows users to track their expenses, visualize spending habits, and manage personal finances—all through a user-friendly Streamlit interface!
 
@@ -45,7 +45,6 @@ A simple yet powerful app that allows users to track their expenses, visualize s
 ## 🌐 Live App
 
 🔗 [Click here to try it Live](https://zi-expense-tracker.streamlit.app/)  
-*(Replace with actual Streamlit link)*
 
 ---
 
