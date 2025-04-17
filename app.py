@@ -12,7 +12,7 @@ st.set_page_config(page_title="💸 Expense Tracker", layout="centered")
 try:
     st.image("expense-track.png")
 except FileNotFoundError:
-    st.warning("Header image (expenses.png) not found. Please ensure the file is uploaded to the repository.")
+    st.warning("Header image (expense-track.png) not found. Please ensure the file is uploaded to the repository.")
 
 st.title("💸 Expense Tracker")
 st.markdown("Track your spending, analyze habits, and stay financially fit! 🧾")

@@ -41,23 +41,11 @@ A simple yet powerful app that allows users to track their expenses, visualize s
 
 ---
 
-## 📸 Screenshots
-
-(Add here if you wish: home screen, pie chart, data table, export buttons, etc.)
-
----
 
 ## 🌐 Live App
 
-🔗 [Click here to try the Expense Tracker](https://your-deployed-link.streamlit.app)  
+🔗 [Click here to try it Live](https://zi-expense-tracker.streamlit.app/)  
 *(Replace with actual Streamlit link)*
 
 ---
 
-## 📂 Run Locally
-
-```bash
-git clone https://github.com/yourusername/expense-tracker.git
-cd expense-tracker
-pip install -r requirements.txt
-streamlit run app.py
