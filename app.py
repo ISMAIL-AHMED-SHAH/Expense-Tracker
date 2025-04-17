@@ -2,15 +2,15 @@ import streamlit as st
 import pandas as pd
 import json
 import os
-from datetime import datetime, date
+from datetime import date
 import matplotlib.pyplot as plt
 import io
-import xlsxwriter
+
 
 # --- Page Config ---
 st.set_page_config(page_title="💸 Expense Tracker", layout="centered")
 try:
-    st.image("expenses.png")
+    st.image("expense-track.png")
 except FileNotFoundError:
     st.warning("Header image (expenses.png) not found. Please ensure the file is uploaded to the repository.")
 
@@ -144,9 +144,9 @@ else:
 # --- Sidebar Motivation ---
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2736/2736690.png", width=100)
 try:
-    st.sidebar.image("expense-track.png")
+    st.sidebar.image("expenses.png")
 except FileNotFoundError:
-    st.sidebar.warning("Sidebar image (expense-track.png) not found. Please ensure the file is uploaded.")
+    st.sidebar.warning("Sidebar image (expenses.png) not found. Please ensure the file is uploaded.")
 
 st.sidebar.markdown("## 💡 Money Tip")
 st.sidebar.info("Track every rupee, and your wallet will thank you! 💰")
@@ -165,10 +165,13 @@ if st.sidebar.button("🧹 Clear All Data"):
     st.sidebar.success("All expense data cleared!")
 
 st.sidebar.markdown("---")
+# 📬 Contact Section
 st.sidebar.markdown("### 📬 Contact")
-st.sidebar.write("📧 [Email](mailto:ismailahmedshahpk@gmail.com)")
-st.sidebar.write("🔗 [LinkedIn](https://www.linkedin.com/in/ismail-ahmed-shah-2455b01ba/)")
-st.sidebar.write("💬 [WhatsApp](https://wa.me/923322241405)")
-
+st.sidebar.write("📧 [Email Us](mailto:ismailahmedshahpk@gmail.com)")
+st.sidebar.write("🔗 [Connect on LinkedIn](https://www.linkedin.com/in/ismail-ahmed-shah-2455b01ba/)")
+st.sidebar.write("💬 [Chat on WhatsApp](https://wa.me/923322241405)")
 st.sidebar.markdown("---")
-st.sidebar.markdown("<p style='text-align: center; color: grey;'>Built with ❤️ by Ismail Ahmed Shah</p>", unsafe_allow_html=True)
+st.sidebar.image("https://cdn-icons-png.flaticon.com/512/3135/3135716.png", width=90, use_container_width=True)
+st.sidebar.markdown("---")
+st.sidebar.markdown("<p style='text-align: center; color: grey;'>Build with ❤️ By Ismail Ahmed Shah</p>", unsafe_allow_html=True)
+st.sidebar.markdown("---")
